@@ -1,0 +1,62 @@
+<nav ng-include="'views/sidebar.html'" class="sidebar"></nav>
+
+<div id="export" ng-controller="ExportCreationController as ecc" class="main-container">
+
+    <h1>Export utilisateurs</h1>
+
+    <div class="notification is-primary">
+        <ul>
+            <li>Afin de cibler un portail en particulier, utilisez le champ Portail</li>
+            <li>Définissez la filter query de base. Pour chaque auteur, celle ci sera modifié afin de prendre en compte le champ author
+            </li>
+        </ul>
+    </div>
+
+    <form>
+
+        <h3 toggle=".section-general" toggle-init="open">General</h3>
+        <div class="group section-general">
+            <kv-input kv-model="ecc.export.portail" kv-editable-key="false" kv-editable-value="param.editable"></kv-input>
+        </div>
+
+        <h3 toggle=".section-parameters">Paramètres</h3>
+        <div class="section-parameters">
+            <kv-input ng-repeat="param in ecc.export.parameters" kv-model="param"
+                      kv-editable-key="false" kv-editable-value="param.editable"></kv-input>
+        </div>
+
+        <h3 toggle=".section-fq">Filter queries (fq)</h3>
+        <div class="group section-fq">
+            <kv-select ng-repeat="(index, field) in ecc.export.filters" kv-model="field"
+                       kv-items="vm.fields" kv-delete="ec.deleteItem('filters', index)"></kv-select>
+            <div class="has-text-right">
+                <button class="button is-primary" ng-click="ecc.addFilter()">Ajouter un filtre</button>
+            </div>
+        </div>
+
+        <h3 toggle=".section-columns">Colonnes</h3>
+        <div class="group section-columns">
+            <div class="columns" ng-repeat="col in ecc.export.columns">
+                <div class="column is-narrow">
+                    <input ng-model="col.key" class="input" placeholder="Column name"/>
+                </div>
+                <div class="column">
+                    <textarea ng-model="col.map" class="textarea" placeholder="Map"></textarea>
+                </div>
+                <div class="column">
+                    <textarea ng-model="col.reduce" class="textarea" placeholder="Reduce"></textarea>
+                </div>
+            </div>
+            <div class="has-text-right">
+                <button class="button is-primary" ng-click="ec.addColumn()">Ajouter une colonne</button>
+            </div>
+        </div>
+
+        <div class="actions has-text-centered">
+            <button class="button is-primary" ng-click="ecc.run()">Exporter</button>
+        </div>
+
+    </form>
+
+
+</div>

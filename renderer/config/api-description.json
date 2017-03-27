@@ -1,0 +1,3564 @@
+{
+  "fields": [
+    {
+      "key": "abstract_s",
+      "description": " Résumé ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "abstract_t",
+      "description": " Résumé Contient une copie de ce champ : *_abstract_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "acm_s",
+      "description": " Classification ACM ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "acm_t",
+      "description": " Classification ACM Contient une copie de ce champ : acm_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectAcronym_s",
+      "description": " Projet ANR : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectAcronym_sci",
+      "description": " Projet ANR : Acronyme Contient une copie de ce champ : anrProjectAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectAcronym_t",
+      "description": " Projet ANR : Acronyme Contient une copie de ce champ : anrProjectAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectCallAcronym_s",
+      "description": " Projet ANR : Acronyme de l'appel à projet ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectCallAcronym_t",
+      "description": " Projet ANR : Acronyme de l'appel à projet Contient une copie de ce champ : anrProjectCallAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectCallTitle_s",
+      "description": " Projet ANR : Nom de l'appel à projet ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectCallTitle_t",
+      "description": " Projet ANR : Nom de l'appel à projet Contient une copie de ce champ : anrProjectCallTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectIdTitle_fs",
+      "description": " Projet ANR : Identifiant interne + _FacetSep_ + nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectId_i",
+      "description": " Projet ANR : Identifiant interne ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectReference_s",
+      "description": " Projet ANR : Référence ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectReference_t",
+      "description": " Projet ANR : Référence Contient une copie de ce champ : anrProjectReference_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectTitleId_fs",
+      "description": " Projet ANR : Nom + _FacetSep_ + Identifiant interne ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectTitle_s",
+      "description": " Projet ANR : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectTitle_t",
+      "description": " Projet ANR : Nom Contient une copie de ce champ : anrProjectTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectValid_s",
+      "description": " Projet ANR : État dans le référentiel ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectYearDate_s",
+      "description": " Projet ANR : Année (AAAA) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProjectYearDate_tdate",
+      "description": " Projet ANR : date (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "anrProject_t",
+      "description": " Projets ANR (multicritères) Permet de chercher en même temps dans les champs : anrProjectAcronym_s anrProjectCallTitle_s anrProjectReference_s anrProjectTitle_s anrProjectYearDate_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "arxivId_id",
+      "description": " Identifiant arXiv Contient une copie de ce champ : arxivId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "arxivId_s",
+      "description": " Identifiant arXiv ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "audience_s",
+      "description": " Audience ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "audience_t",
+      "description": " Audience Contient une copie de ce champ : audience_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authAlphaLastNameFirstNameIdHal_fs",
+      "description": " Auteur : 1ère lettre nom de famille + _AlphaSep_ + Nom de famille Prénom + _FacetSep_ + IdHAL de l'auteur s'il existe ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authAlphaLastNameFirstNameId_fs",
+      "description": " Auteur : 1ère lettre nom de famille + _AlphaSep_ + Nom de famille Prénom + _FacetSep_ + Identifiant interne de l'auteur ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authFirstName_s",
+      "description": " Auteur : Prénom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authFirstName_sci",
+      "description": " Auteur : Prénom Contient une copie de ce champ : authFirstName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authFirstName_t",
+      "description": " Auteur : Prénom Contient une copie de ce champ : authFirstName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authFullNameIdHal_fs",
+      "description": " Auteur : Nom complet + _FacetSep_ + IdHal ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authFullNameId_fs",
+      "description": " Auteur : Nom complet + _FacetSep_ + Identifiant interne ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authFullName_s",
+      "description": " Auteur : Nom complet ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authFullName_sci",
+      "description": " Auteur : Nom complet Contient une copie de ce champ : authFullName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authFullName_t",
+      "description": " Auteur : Nom complet Contient une copie de ce champ : authFullName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authIdFullName_fs",
+      "description": " Auteur : Identifiant interne + _FacetSep_ + Nom complet ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authIdHalFullName_fs",
+      "description": " Auteur : IdHal + _FacetSep_ + Nom complet ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authIdHal_i",
+      "description": " Auteur : idHal numérique ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authIdHal_s",
+      "description": " Auteur : IdHal (chaîne de caractères) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authIdHasPrimaryStructure_fs",
+      "description": " Identifiant interne + _FacetSep_ + Nom complet + _JoinSep_ + Identifiant HAL de structure primaire + _FacetSep_ + Nom de la structure primaire ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authIdHasStructure_fs",
+      "description": " Identifiant interne + _FacetSep_ + Nom complet + _JoinSep_ + Identifiant HAL de structure + _FacetSep_ + Nom de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authIdLastNameFirstName_fs",
+      "description": " Identifiant interne + _FacetSep_ + Nom de famille Prénom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authId_i",
+      "description": " Auteur : Identifiant ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authLastNameFirstName_s",
+      "description": " Auteur : Nom de famille, Prénom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authLastName_s",
+      "description": " Auteur : Nom de famille ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authLastName_sci",
+      "description": " Auteur : Nom de famille Contient une copie de ce champ : authLastName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authLastName_t",
+      "description": " Auteur : Nom de famille Contient une copie de ce champ : authLastName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authMiddleName_s",
+      "description": " Auteur : Complément de nom, deuxième prénom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authMiddleName_sci",
+      "description": " Auteur : Complément de nom, deuxième prénom Contient une copie de ce champ : authMiddleName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authMiddleName_t",
+      "description": " Auteur : Complément de nom, deuxième prénom Contient une copie de ce champ : authMiddleName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authOrganismId_i",
+      "description": " Auteur : Identifiant de l'organisme payeur ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authOrganism_s",
+      "description": " Auteur : Organisme payeur ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authOrganism_t",
+      "description": " Auteur : Organisme payeur Contient une copie de ce champ : authOrganism_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authQuality_s",
+      "description": " Auteur : Fonction ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authStructId_i",
+      "description": " Auteur : Identifiant de la structure ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authUrl_s",
+      "description": " Auteur : URL ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "auth_autocomplete",
+      "description": " Contient une copie de ce champ : authFullName_s ",
+      "type": "text_autocomplete  Texte pour une recherche de type auto-complétion ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "auth_sort",
+      "description": " Champ pour trier par auteur, contient le nom de famille du premier auteur ",
+      "type": "alphaOnlySort  Tri lexicographique ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "auth_t",
+      "description": " Auteur (multicritères) Permet de chercher en même temps dans les champs : authFullName_s authMiddleName_s authOrganism_s authQuality_s *IdExt_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "authorityInstitution_s",
+      "description": " Organisme de délivrance pour les thèses ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "authorityInstitution_t",
+      "description": " Organisme de délivrance pour les thèses Contient une copie de ce champ : authorityInstitution_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "baseMap_s",
+      "description": " Fond de carte ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "baseMap_t",
+      "description": " Fond de carte Contient une copie de ce champ : baseMap_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "bookCollection_s",
+      "description": " Collection de livre ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "bookCollection_t",
+      "description": " Collection de livre Contient une copie de ce champ : bookCollection_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "bookTitle_s",
+      "description": " Titre de l'ouvrage ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "bookTitle_t",
+      "description": " Titre de l'ouvrage Contient une copie de ce champ : bookTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "campusaar_context_t",
+      "description": " hal_campusaar_context_t ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "campusaar_genre_t",
+      "description": " hal_campusaar_genre_t ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "citationFull_s",
+      "description": " Citation complète ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "citationRef_s",
+      "description": " Citation abrégée ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "city_s",
+      "description": " Ville ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "city_t",
+      "description": " Ville Contient une copie de ce champ : city_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "classification_s",
+      "description": " Classification ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "classification_t",
+      "description": " Classification Contient une copie de ce champ : classification_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "collCategoryCodeName_fs",
+      "description": " Collection HAL Catégorie de la collection + _JoinSep_ + code de la collection + _FacetSep_ + Nom de la collection ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collCategory_s",
+      "description": " Collection HAL : catégorie ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collCodeName_fs",
+      "description": " Collection HAL : Code + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collCode_s",
+      "description": " Collection HAL : Code ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collIdName_fs",
+      "description": " Collection HAL : Identifiant interne + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collId_i",
+      "description": " Collection HAL : Identifiant interne ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collIsChildOfColl_fs",
+      "description": " Collection HAL : Identifiant interne de la collection enfant + _FacetSep_ + Nom de la collection enfant + _JoinSep_ + Identifiant interne de la collection parente + _FacetSep_ + Nom de la collection parente ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collIsParentOfCategoryColl_fs",
+      "description": " Collection : Collection parente + _FacetSep_ + type collection parente + _JoinSep_ + Code de la collection + _FacetSep_ + Nom de la collection ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collIsParentOfColl_fs",
+      "description": " Collection HAL : Identifiant interne de la collection parente + _FacetSep_ + Nom de la collection parente + _JoinSep_ + Identifiant interne de la collection enfant + _FacetSep_ + Nom de la collection enfant ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collNameCode_fs",
+      "description": " Collection HAL : Nom + _FacetSep_ + Code ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collNameId_fs",
+      "description": " Collection HAL : Nom + _FacetSep_ + indentifiant interne ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collName_s",
+      "description": " Collection HAL : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collName_t",
+      "description": " Collection HAL : Nom Contient une copie de ce champ : collName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "collaboration_s",
+      "description": " Collaborations ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "collaboration_sci",
+      "description": " Collaborations Contient une copie de ce champ : collaboration_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "collaboration_t",
+      "description": " Collaborations Contient une copie de ce champ : collaboration_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "collection_t",
+      "description": " Collection HAL (multicritères) Permet de chercher en même temps dans les champs : collCategory_s collCode_s collName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "comment_s",
+      "description": " Commentaire ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "comment_t",
+      "description": " Commentaire Contient une copie de ce champ : comment_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "committee_s",
+      "description": " Membre du jury de thèse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "committee_t",
+      "description": " Membre du jury de thèse Contient une copie de ce champ : committee_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "conferenceEndDateD_i",
+      "description": " Colloque : date de fin (Jour) ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceEndDateM_i",
+      "description": " Colloque : date de fin (Mois) ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceEndDateY_i",
+      "description": " Colloque : date de fin (Année) ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceEndDate_s",
+      "description": " Colloque : Date de fin ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceEndDate_tdate",
+      "description": " Colloque : Date de fin (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceOrganizer_s",
+      "description": " Colloque : Organisateur ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "conferenceOrganizer_t",
+      "description": " Colloque : Organisateur Contient une copie de ce champ : conferenceOrganizer_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "conferenceStartDateD_i",
+      "description": " Colloque : date de début (Jour) ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceStartDateM_i",
+      "description": " Colloque : date de début (Mois) ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceStartDateY_i",
+      "description": " Colloque : date de début (Année) ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceStartDate_s",
+      "description": " Colloque : Date de début ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceStartDate_tdate",
+      "description": " Colloque : Date de début (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceTitle_s",
+      "description": " Colloque : Titre ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceTitle_sci",
+      "description": " Colloque : Titre Contient une copie de ce champ : conferenceTitle_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "conferenceTitle_t",
+      "description": " Colloque : Titre Contient une copie de ce champ : conferenceTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "conference_t",
+      "description": " Colloque (multicritères) Permet de chercher en même temps dans les champs : conferenceEndDate_s conferenceOrganizer_s conferenceStartDate_s conferenceTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "contributorFullNameId_fs",
+      "description": " Nom complet du contributeur/déposant + _FacetSep_ + identifiant interne du contributeur/déposant ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "contributorFullName_s",
+      "description": " Nom complet du contributeur/déposant ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "contributorFullName_t",
+      "description": " Nom complet du contributeur/déposant Contient une copie de ce champ : contributorFullName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "contributorIdFullName_fs",
+      "description": " Identifiant interne du contributeur/déposant + _FacetSep_ + Nom complet du contributeur/déposant ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "contributorId_i",
+      "description": " Identifiant interne du contributeur/déposant ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "coordinates_s",
+      "description": " Coordonnées GPS ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "country_s",
+      "description": " Pays (Code ISO 3166) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "country_t",
+      "description": " Pays (Texte) ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "credit_s",
+      "description": " Crédits ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "credit_t",
+      "description": " Crédits Contient une copie de ce champ : credit_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "dateLastIndexed_tdate",
+      "description": " Date de la dernière indexation du document (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "defenseDateD_i",
+      "description": " Date de soutenance : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "defenseDateM_i",
+      "description": " Date de soutenance : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "defenseDateY_i",
+      "description": " Date de soutenance : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "defenseDate_s",
+      "description": " Date de soutenance ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "defenseDate_tdate",
+      "description": " Date de soutenance (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "degreeType_s",
+      "description": " Type de diplôme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "degreeType_t",
+      "description": " Type de diplôme Contient une copie de ce champ : degreeType_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructAcronym_s",
+      "description": " Structure/département : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructAcronym_sci",
+      "description": " Structure/département : Acronyme Contient une copie de ce champ : deptStructAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructAcronym_t",
+      "description": " Structure/département : Acronyme Contient une copie de ce champ : deptStructAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructAddress_s",
+      "description": " Structure/département : Adresse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructCode_s",
+      "description": " Structure/département : Code ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructCode_sci",
+      "description": " Structure/département : Code Contient une copie de ce champ : deptStructCode_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructCode_t",
+      "description": " Structure/département : Code Contient une copie de ce champ : deptStructCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructCountry_s",
+      "description": " Structure/département : Pays ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructIdName_fs",
+      "description": " Structure/département : Identifiant HAL de la structure + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructId_i",
+      "description": " Structure/département : Identifiant HAL de la structure ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructIsChildOf_fs",
+      "description": " Structure/département : Identifiant structure enfant + _ + Nom structure enfant + _JoinSep_ + Identifiant structure parente + _ + Nom structure parente ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructIsParentOf_fs",
+      "description": " Structure/département : Identifiant structure parente + _JoinSep_ + 1 ère lettre du Nom de structure enfant + _AlphaSep_ + Identifiant structure enfant + _FacetSep_ + Nom structure enfant ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructNameId_fs",
+      "description": " Nom de la structure + _FacetSep_ + Identifiant HAL de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructName_fs",
+      "description": " Structure/département : 1 ère lettre du Nom + _AlphaSep_ + Nom de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructName_s",
+      "description": " Structure/département : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructName_sci",
+      "description": " Structure/département : Nom Contient une copie de ce champ : deptStructName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructName_t",
+      "description": " Structure/département : Nom Contient une copie de ce champ : deptStructName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructType_s",
+      "description": " Structure/département : Type ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "deptStructValid_s",
+      "description": " Structure/département : État ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "description_s",
+      "description": " Description ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "director_s",
+      "description": " Directeur de thèse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "director_t",
+      "description": " Directeur de thèse Contient une copie de ce champ : director_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "docType_s",
+      "description": " Type de document ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "docid",
+      "description": " Identifiant unique interne du document ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "doiId_id",
+      "description": " Identifiant DOI Contient une copie de ce champ : doiId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "doiId_s",
+      "description": " Identifiant DOI ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "domainAllCode_s",
+      "description": " Tous les codes domaines du document ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "domain_s",
+      "description": " Codes domaines du document ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "domain_t",
+      "description": " Domaines Contient une copie de ce champ : domain_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "ePublicationDateD_i",
+      "description": " Date de publication électronique : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "ePublicationDateM_i",
+      "description": " Date de publication électronique : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "ePublicationDateY_i",
+      "description": " Date de publication électronique : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "ePublicationDate_s",
+      "description": " Date de publication électronique ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "ePublicationDate_tdate",
+      "description": " Date de publication électronique (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "ensamId_id",
+      "description": " Identifiant ENSAM Contient une copie de ce champ : ensamId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "ensamId_s",
+      "description": " Identifiant ENSAM ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "europeanProjectAcronym_s",
+      "description": " Projet européen : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectAcronym_sci",
+      "description": " Projet européen : Acronyme Contient une copie de ce champ : europeanProjectAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectAcronym_t",
+      "description": " Projet européen : Acronyme Contient une copie de ce champ : europeanProjectAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectCallId_s",
+      "description": " Projet européen : Identifiant de l'appel à projet ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectCallId_t",
+      "description": " Projet européen : Identifiant de l'appel à projet Contient une copie de ce champ : europeanProjectCallId_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectEndDate_s",
+      "description": " Projet européen : Date de fin ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectFinancing_s",
+      "description": " Projet européen : Financement ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectIdTitle_fs",
+      "description": " Identifiant interne de projet européen + _FacetSep_ + Nom du projet européen ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectId_i",
+      "description": " Projet européen : Identifiant interne ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectOpenaire_bool",
+      "description": " Données OpenAIRE ",
+      "type": "boolean  Booléen (true ou false) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectReference_s",
+      "description": " Projet européen : Référence ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectReference_t",
+      "description": " Projet européen : Référence Contient une copie de ce champ : europeanProjectReference_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectStartDate_s",
+      "description": " Projet européen : Date de début ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectTitleId_fs",
+      "description": " Nom du projet européen + _FacetSep_ + Identifiant interne de projet européen ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectTitle_s",
+      "description": " Projet européen : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectTitle_t",
+      "description": " Projet européen : Nom Contient une copie de ce champ : europeanProjectTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProjectValid_s",
+      "description": " Projet européen : État dans le référentiel ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "europeanProject_t",
+      "description": " Projets européens (multicritères) Permet de chercher en même temps dans les champs : europeanProjectAcronym_s europeanProjectCallId_s europeanProjectEndDate_s europeanProjectReference_s europeanProjectStartDate_s europeanProjectTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "fileAnnexesAudio_s",
+      "description": " hal_fileAnnexesAudio_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "fileAnnexesFigure_s",
+      "description": " hal_fileAnnexesFigure_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "fileAnnexesVideo_s",
+      "description": " hal_fileAnnexesVideo_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "fileAnnexes_s",
+      "description": " URL des annexes ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "fileMainAnnex_s",
+      "description": " URL de l'annexe principale ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "fileMain_s",
+      "description": " URL du fichier principal ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "fileType_s",
+      "description": " Type de fichier ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "files_s",
+      "description": " URL des fichiers ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "fulltext_t",
+      "description": " Texte intégral indexé des documents PDF ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "funding_s",
+      "description": " Financement ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "funding_t",
+      "description": " Financement Contient une copie de ce champ : funding_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "halId_id",
+      "description": " Identifiant HAL du dépôt Contient une copie de ce champ : halId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "halId_s",
+      "description": " Identifiant HAL du dépôt ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "hec_ranking_s",
+      "description": " Classement HEC ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "hec_ranking_t",
+      "description": " Classement HEC Contient une copie de ce champ : hec_ranking_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "historicalPeriod_s",
+      "description": " hal_historicalPeriod_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "historicalPeriod_t",
+      "description": " Période historique Contient une copie de ce champ : historicalPeriod_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "identifiers_id",
+      "description": " Tous les identifiants du document Permet de chercher en même temps dans les champs : number_s *Id_s *_id ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "imageType_s",
+      "description": " Type d'image (codes numériques) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "imageType_t",
+      "description": " Type d'image (codes + valeurs textes) Contient une copie de ce champ : imageType_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructAcronym_s",
+      "description": " Structure/institution : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructAcronym_sci",
+      "description": " Structure/institution : Acronyme Contient une copie de ce champ : instStructAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructAcronym_t",
+      "description": " Structure/institution : Acronyme Contient une copie de ce champ : instStructAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructAddress_s",
+      "description": " Structure/institution : Adresse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructCode_s",
+      "description": " Structure/institution : Code ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructCode_sci",
+      "description": " Structure/institution : Code Contient une copie de ce champ : instStructCode_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructCode_t",
+      "description": " Structure/institution : Code Contient une copie de ce champ : instStructCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructCountry_s",
+      "description": " Structure/institution : Pays ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructIdName_fs",
+      "description": " Structure/institution : Identifiant HAL de la structure + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructId_i",
+      "description": " Structure/institution : Identifiant HAL de la structure ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructIsChildOf_fs",
+      "description": " Structure/institution : Identifiant structure enfant + _ + Nom structure enfant + _JoinSep_ + Identifiant structure parente + _ + Nom structure parente ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructIsParentOf_fs",
+      "description": " Structure/institution : Identifiant structure parente + _JoinSep_ + 1 ère lettre du Nom de structure enfant + _AlphaSep_ + Identifiant structure enfant + _FacetSep_ + Nom structure enfant ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructNameId_fs",
+      "description": " Structure/institution : Nom + _FacetSep_ + Identifiant HAL de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructName_fs",
+      "description": " Structure/institution : 1 ère lettre du Nom + _AlphaSep_ + Nom de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructName_s",
+      "description": " Structure/institution : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructName_sci",
+      "description": " Structure/institution : Nom Contient une copie de ce champ : instStructName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructName_t",
+      "description": " Structure/institution : Nom Contient une copie de ce champ : instStructName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "instStructType_s",
+      "description": " Structure/institution : Type ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instStructValid_s",
+      "description": " Structure/institution : État ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "instance_s",
+      "description": " Instance HAL ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "invitedCommunication_s",
+      "description": " Conférence invitée ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "invitedCommunication_t",
+      "description": " Conférence invitée Contient une copie de ce champ : invitedCommunication_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "irdId_id",
+      "description": " Identifiant IRD Contient une copie de ce champ : irdId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "irdId_s",
+      "description": " Identifiant IRD ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "irsteaId_id",
+      "description": " Identifiant IRSTEA Contient une copie de ce champ : irsteaId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "irsteaId_s",
+      "description": " Identifiant IRSTEA ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "isbn_id",
+      "description": " ISBN Contient une copie de ce champ : isbn_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "isbn_s",
+      "description": " ISBN ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "issue_s",
+      "description": " Numéro de revue ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "jel_s",
+      "description": " Classification JEL (codes) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "jel_t",
+      "description": " Classification JEL (codes + valeurs textes) Contient une copie de ce champ : jel_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "journalDate_s",
+      "description": " Revue : Date de début de publication ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalDoiRoot_s",
+      "description": " Revue : Racine DOI ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalEissn_s",
+      "description": " Revue : ISSN électronique ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalIdTitle_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalId_i",
+      "description": " Revue : Identifiant interne ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalIssn_s",
+      "description": " Revue : ISSN ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalPublisher_s",
+      "description": " Revue : Éditeur ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalPublisher_t",
+      "description": " Revue : Éditeur Contient une copie de ce champ : journalPublisher_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaColor_s",
+      "description": " Revue : Couleur dans SHERPA/RoMEO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaCondition_s",
+      "description": " Revue : Détail des conditions dans SHERPA/RoMEO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaDate_s",
+      "description": " Revue : Date de mise à jour des infos SHERPA dans le référentiel ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaPostPrint_s",
+      "description": " Revue : Autorisation des postprints selon SHERPA/RoMEO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaPostRest_s",
+      "description": " Revue : Restriction postprint selon SHERPA/RoMEO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaPrePrint_s",
+      "description": " Revue : Autorisation des preprints selon SHERPA/RoMEO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalSherpaPreRest_s",
+      "description": " Revue : Restriction preprints selon SHERPA/RoMEO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalTitleAbbr_s",
+      "description": " Revue : Titre abrégé ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalTitleAbbr_sci",
+      "description": " Revue : Titre abrégé Contient une copie de ce champ : journalTitleAbbr_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "journalTitleAbbr_t",
+      "description": " Revue : Titre abrégé Contient une copie de ce champ : journalTitleAbbr_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "journalTitleId_fs",
+      "description": " Titre de la revue + _FacetSep_ + Identifiant HAL de la revue ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalTitle_s",
+      "description": " Revue : Titre ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalTitle_t",
+      "description": " Revue : Titre Contient une copie de ce champ : journalTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "journalUrl_s",
+      "description": " Revue : URL ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journalValid_s",
+      "description": " Revue : État dans le référentiel ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "journal_t",
+      "description": " Revues (multicritères) Permet de chercher en même temps dans les champs : journalEissn_s journalIssn_s journalPublisher_s journalTitleAbbr_s journalTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "keyword_autocomplete",
+      "description": " Champ pour auto-complétion sur les mots-clés Contient une copie de ce champ : *_keyword_s ",
+      "type": "text_autocomplete  Texte pour une recherche de type auto-complétion ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "keyword_s",
+      "description": " Mots-clés Contient une copie de ce champ : *_keyword_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "keyword_sci",
+      "description": " Mots-clés Contient une copie de ce champ : *_keyword_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "keyword_t",
+      "description": " Mots-clés Contient une copie de ce champ : *_keyword_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "laas_directorEmail_s",
+      "description": " hal_laas_directorEmail_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "laas_renatech_s",
+      "description": " hal_laas_renatech_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "laas_renatech_t",
+      "description": " hal_laas_renatech_t ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructAcronym_s",
+      "description": " Structure/laboratoire : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructAcronym_sci",
+      "description": " Structure/laboratoire : Acronyme Contient une copie de ce champ : labStructAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructAcronym_t",
+      "description": " Structure/laboratoire : Acronyme Contient une copie de ce champ : labStructAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructAddress_s",
+      "description": " Structure/laboratoire : Adresse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructCode_s",
+      "description": " Structure/laboratoire : Code ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructCode_sci",
+      "description": " Structure/laboratoire : Code Contient une copie de ce champ : labStructCode_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructCode_t",
+      "description": " hal_labStructCode_t Contient une copie de ce champ : labStructCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructCountry_s",
+      "description": " Structure/laboratoire : Pays ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructIdName_fs",
+      "description": " Identifiant HAL de la structure + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructId_i",
+      "description": " Structure/laboratoire : Identifiant HAL de la structure ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructIsChildOf_fs",
+      "description": " Structure/laboratoire : Identifiant structure enfant + _ + Nom structure enfant + _JoinSep_ + Identifiant structure parente + _ + Nom structure parente ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructIsParentOf_fs",
+      "description": " Structure/laboratoire : Identifiant structure parente + _JoinSep_ + 1 ère lettre du Nom de structure enfant + _AlphaSep_ + Identifiant structure enfant + _FacetSep_ + Nom structure enfant ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructNameId_fs",
+      "description": " Structure/laboratoire : Nom + _FacetSep_ + Identifiant HAL de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructName_fs",
+      "description": " Structure/laboratoire : 1 ère lettre du Nom + _AlphaSep_ + Nom de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructName_s",
+      "description": " Structure/laboratoire : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructName_sci",
+      "description": " Structure/laboratoire : Nom Contient une copie de ce champ : labStructName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructName_t",
+      "description": " Structure/laboratoire : Nom Contient une copie de ce champ : labStructName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "labStructType_s",
+      "description": " Structure/laboratoire : Type ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "labStructValid_s",
+      "description": " Structure/laboratoire : État ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "label_bibtex",
+      "description": " Référence bibliographique du document (format BibTeX ) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "label_coins",
+      "description": " Référence bibliographique du document (format COinS ) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "label_endnote",
+      "description": " Référence bibliographique du document (format endnote) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "label_s",
+      "description": " Référence bibliographique du document ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "label_xml",
+      "description": " Version TEI des métadonnées du document ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "language_s",
+      "description": " Langue du document (code ISO 639-1 (alpha-2)) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "language_t",
+      "description": " Langue du document (texte) ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "lectureName_s",
+      "description": " Nom du cours ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "lectureType_s",
+      "description": " Niveau du cours ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "lectureType_t",
+      "description": " Niveau du cours Contient une copie de ce champ : lectureType_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "length_i",
+      "description": " hal_length_i ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "licence_s",
+      "description": " Droit d'auteur associé au document ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "licence_t",
+      "description": " Droit d'auteur associé au document ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "localReference_s",
+      "description": " Référence interne ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "localReference_t",
+      "description": " Référence interne Contient une copie de ce champ : localReference_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "location",
+      "description": " Coordonnées géographiques ",
+      "type": "location  Coordonnées géographiques) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "location_0_coordinate",
+      "description": " Coordonnées géographiques (latitude) ",
+      "type": "double  Nombre en virgule flottante (double-precision 64-bit IEEE 754 floating point) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "location_1_coordinate",
+      "description": " Coordonnées géographiques (longitude) ",
+      "type": "double  Nombre en virgule flottante (double-precision 64-bit IEEE 754 floating point) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "mesh_s",
+      "description": " Classification MeSH (codes) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "mesh_t",
+      "description": " Classification MeSH (codes + valeurs textes) Contient une copie de ce champ : mesh_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "modifiedDateD_i",
+      "description": " Date de modification du dépôt : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "modifiedDateM_i",
+      "description": " Date de modification du dépôt : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "modifiedDateY_i",
+      "description": " Date de modification du dépôt : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "modifiedDate_s",
+      "description": " Date de modification du dépôt ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "modifiedDate_tdate",
+      "description": " Date de modification du dépôt (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "nntId_id",
+      "description": " Numéro National des Thèses Contient une copie de ce champ : nntId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "nntId_s",
+      "description": " Numéro National des Thèses ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "number_id",
+      "description": " Numéro - référence Contient une copie de ce champ : number_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "number_s",
+      "description": " Numéro - référence ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "oataoId_id",
+      "description": " Identifiant OATAO Contient une copie de ce champ : oataoId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "oataoId_s",
+      "description": " Identifiant OATAO ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "owners_i",
+      "description": " Propriétaires du dépôt ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "page_s",
+      "description": " Page ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "peerReviewing_s",
+      "description": " Comité de lecture - code (1 ou 0) ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "peerReviewing_t",
+      "description": " Comité de lecture - texte (oui ou non) Contient une copie de ce champ : peerReviewing_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "popularLevel_s",
+      "description": " Vulgarisation ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "popularLevel_t",
+      "description": " Vulgarisation Contient une copie de ce champ : popularLevel_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "primaryDomain_s",
+      "description": " Domaine primaire ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "proceedings_s",
+      "description": " Actes de colloque ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "proceedings_t",
+      "description": " Actes de colloque Contient une copie de ce champ : proceedings_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "producedDateD_i",
+      "description": " Date de publication : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "producedDateM_i",
+      "description": " Date de publication : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "producedDateY_i",
+      "description": " Date de publication : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "producedDate_s",
+      "description": " Date de publication ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "producedDate_tdate",
+      "description": " Date de publication (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "publicationLocation_s",
+      "description": " Lieu de publication ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "publicationLocation_t",
+      "description": " Lieu de publication Contient une copie de ce champ : publicationLocation_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "publisherLink_s",
+      "description": " hal_publisherLink_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "publisher_s",
+      "description": " Éditeur ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "publisher_t",
+      "description": " Éditeur Contient une copie de ce champ : publisher_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "pubmedId_id",
+      "description": " Identifiant PubMed Contient une copie de ce champ : pubmedId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "pubmedId_s",
+      "description": " Identifiant PubMed ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "relator_s",
+      "description": " Narrateur ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "relator_t",
+      "description": " Narrateur Contient une copie de ce champ : relator_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "releasedDateD_i",
+      "description": " Date de mise en ligne : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "releasedDateM_i",
+      "description": " Date de mise en ligne : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "releasedDateY_i",
+      "description": " Date de mise en ligne : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "releasedDate_s",
+      "description": " Date de mise en ligne ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "releasedDate_tdate",
+      "description": " Date de mise en ligne (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "reportType_s",
+      "description": " Type de rapport ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "reportType_t",
+      "description": " Type de rapport Contient une copie de ce champ : reportType_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructAcronym_s",
+      "description": " Structure/équipe de recherche : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructAcronym_sci",
+      "description": " Structure/équipe de recherche : Acronyme Contient une copie de ce champ : rteamStructAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructAcronym_t",
+      "description": " Structure/équipe de recherche : Acronyme Contient une copie de ce champ : rteamStructAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructAddress_s",
+      "description": " Structure/équipe de recherche : Adresse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructCode_s",
+      "description": " Structure/équipe de recherche : Code ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructCode_sci",
+      "description": " Structure/équipe de recherche : Code Contient une copie de ce champ : rteamStructCode_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructCode_t",
+      "description": " hal_rteamStructCode_t Contient une copie de ce champ : rteamStructCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructCountry_s",
+      "description": " Structure/équipe de recherche : Pays ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructIdName_fs",
+      "description": " Structure/équipe de recherche : Identifiant HAL de la structure + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructId_i",
+      "description": " Structure/équipe de recherche : Identifiant HAL de la structure ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructIsChildOf_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructIsParentOf_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructNameId_fs",
+      "description": " Structure/équipe de recherche : Nom + _FacetSep_ + Identifiant HAL de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructName_fs",
+      "description": " hal_rteamStructName_fs ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructName_s",
+      "description": " Structure/équipe de recherche : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructName_sci",
+      "description": " Structure/équipe de recherche : Nom Contient une copie de ce champ : rteamStructName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructName_t",
+      "description": " Structure/équipe de recherche : Nom Contient une copie de ce champ : rteamStructName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructType_s",
+      "description": " Structure/équipe de recherche : Type ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "rteamStructValid_s",
+      "description": " Structure/équipe de recherche : État ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "scale_s",
+      "description": " Échelle ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "scale_t",
+      "description": " Échelle Contient une copie de ce champ : scale_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "sciencespoId_id",
+      "description": " Identifiant Sciences Po Contient une copie de ce champ : sciencespoId_s ",
+      "type": "identifier  Texte pour une recherche sur des identifiants, ignore les séparateurs comme - _ / ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "sciencespoId_s",
+      "description": " Identifiant Sciences Po ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "scientificEditor_s",
+      "description": " Éditeur scientifique ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "scientificEditor_t",
+      "description": " Éditeur scientifique Contient une copie de ce champ : scientificEditor_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "seeAlso_s",
+      "description": " Voir aussi ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "selfArchiving_bool",
+      "description": " Dépôt en auto-archivage ",
+      "type": "boolean  Booléen (true ou false) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "serie_s",
+      "description": " Série ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "serie_t",
+      "description": " hal_serie_t Contient une copie de ce champ : serie_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "seriesEditor_s",
+      "description": " Éditeur de la série ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "seriesEditor_t",
+      "description": " Éditeur de la série Contient une copie de ce champ : seriesEditor_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "sid_i",
+      "description": " Portail de dépôt : identifiant numérique interne ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "source_s",
+      "description": " Source ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "speaker_s",
+      "description": " hal_speaker_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "state_s",
+      "description": " hal_state_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "state_t",
+      "description": " hal_state_t Contient une copie de ce champ : state_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "status_i",
+      "description": " Statut du document ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "structAcronym_s",
+      "description": " Structure : Acronyme ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structAcronym_sci",
+      "description": " Structure : Acronyme Contient une copie de ce champ : structAcronym_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structAcronym_t",
+      "description": " Structure : Acronyme Contient une copie de ce champ : structAcronym_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structAddress_s",
+      "description": " Structure : Adresse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structCode_s",
+      "description": " Structure : Code ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structCode_sci",
+      "description": " Structure : Code Contient une copie de ce champ : structCode_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structCode_t",
+      "description": " Structure : Code Contient une copie de ce champ : structCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structCountry_s",
+      "description": " Structure : Pays ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structCountry_t",
+      "description": " Structure : Pays Contient une copie de ce champ : structCountry_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structHasAlphaAuthIdHal_fs",
+      "description": " hal_structHasAlphaAuthIdHal_fs ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structHasAlphaAuthId_fs",
+      "description": " 1 ère lettre Nom auteur + _AlphaSep_ + Identifiant de structure + _FacetSep_ + Nom structure + _JoinSep_ + Identifiant Auteur + _FacetSep_ + Nom auteur ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structHasAuthIdHal_fs",
+      "description": " hal_structHasAuthIdHal_fs ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structHasAuthId_fs",
+      "description": " Identifiant de structure + _FacetSep_ + Nom structure + _JoinSep_ + Identifiant Auteur + _FacetSep_ + Nom auteur ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structIdName_fs",
+      "description": " Structure : Identifiant HAL de la structure + _FacetSep_ + Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structId_i",
+      "description": " Structure : Identifiant HAL de la structure ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structIsChildOf_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structIsParentOfType_fs",
+      "description": " hal_structIsParentOfType_fs ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structIsParentOf_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structNameId_fs",
+      "description": " Structure : 1 ère lettre du Nom + _AlphaSep_ + Nom + _FacetSep_ + Identifiant HAL de la structure ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structName_fs",
+      "description": " Structure : Nom ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structName_s",
+      "description": " Structure : Nom ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structName_sci",
+      "description": " Structure : Nom Contient une copie de ce champ : structName_s ",
+      "type": "stringCaseInsensitive  Texte pour recherche exacte mais insensible à la casse/accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structName_t",
+      "description": " Structure : Nom Contient une copie de ce champ : structName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "structPrimaryHasAlphaAuthIdHal_fs",
+      "description": " hal_structPrimaryHasAlphaAuthIdHal_fs ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structPrimaryHasAlphaAuthId_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structPrimaryHasAuthIdHal_fs",
+      "description": " hal_structPrimaryHasAuthIdHal_fs ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structPrimaryHasAuthId_fs",
+      "description": " ",
+      "type": "facetString  Texte pour générer des facettes ",
+      "indexed": false,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structType_s",
+      "description": " Structure : Type ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structValid_s",
+      "description": " Structure : État dans le référentiel ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "structure_t",
+      "description": " Structure (multicritères) Permet de chercher en même temps dans les champs : structAcronym_s structCode_s structId_i structName_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "subTitle_s",
+      "description": " Sous-titre Contient une copie de ce champ : *_subTitle_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "subTitle_t",
+      "description": " Sous-titre Contient une copie de ce champ : *_subTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "submitType_s",
+      "description": " Type de dépôt ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "submittedDateD_i",
+      "description": " Date de dépôt : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "submittedDateM_i",
+      "description": " Date de dépôt : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "submittedDateY_i",
+      "description": " Date de dépôt : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "submittedDate_s",
+      "description": " Date de dépôt ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "submittedDate_tdate",
+      "description": " Date de dépôt (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "text",
+      "description": " Champ de recherche par défaut (multicritères) Permet de chercher en même temps dans les champs : anrProjectAcronym_s anrProjectTitle_s authFullName_s bookTitle_s conferenceTitle_s docid europeanProjectAcronym_s europeanProjectTitle_s isbn_s journalEissn_s journalIssn_s journalTitle_s number_s producedDateY_i title_s *_abstract_s *_subTitle_s *_keyword_s *Id_s *IdExt_s *_id *tructName_s *tructAcronym_s *tructCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "text_fulltext",
+      "description": " Champ de recherche par défaut (multicritères) + texte intégral des PDF Permet de chercher en même temps dans les champs : anrProjectAcronym_s anrProjectTitle_s authFullName_s bookTitle_s conferenceTitle_s docid europeanProjectAcronym_s europeanProjectTitle_s fulltext_t isbn_s journalEissn_s journalIssn_s journalTitle_s number_s producedDateY_i title_s *_abstract_s *_subTitle_s *_keyword_s *Id_s *IdExt_s *_id *tructName_s *tructAcronym_s *tructCode_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "thesisSchool_s",
+      "description": " École de thèse ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "thesisSchool_t",
+      "description": " École de thèse Contient une copie de ce champ : thesisSchool_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "thumbId_i",
+      "description": " Identifiant de l'image miniature du document principal ou de l'annexe principale ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "title_autocomplete",
+      "description": " Champ pour une recherche de type auto-complétion sur les titres Permet de chercher en même temps dans les champs : bookTitle_s conferenceTitle_s journalTitle_s *_title_s *_subTitle_s ",
+      "type": "text_autocomplete  Texte pour une recherche de type auto-complétion ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "title_s",
+      "description": " Titres ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": true
+    },
+    {
+      "key": "title_sort",
+      "description": " Champ pour le tri par titre ",
+      "type": "alphaOnlySort  Tri lexicographique ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": false
+    },
+    {
+      "key": "title_st",
+      "description": " Titres (sans les mots vides) Contient une copie de ce champ : title_s ",
+      "type": "textStopWords  Texte pour une recherche sans mots-vides ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "title_t",
+      "description": " Titres Permet de chercher en même temps dans les champs : title_s *_subTitle_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "typeAnnex_s",
+      "description": " Type d'annexe ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "typeAnnex_t",
+      "description": " Type d'annexe Contient une copie de ce champ : typeAnnex_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "type_s",
+      "description": " Type ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "type_t",
+      "description": " Type Contient une copie de ce champ : type_s ",
+      "type": "text  Texte pour recherche, insensible à la casse et aux accents ",
+      "indexed": true,
+      "stored": false,
+      "multiValue": true
+    },
+    {
+      "key": "univLorraine_urlFulltext_s",
+      "description": " hal_univLorraine_urlFulltext_s ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "uri_s",
+      "description": " URI ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "version_i",
+      "description": " Version du document ",
+      "type": "int  Nombre entier (-2 31 à 2 31 -1) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "volume_s",
+      "description": " Volume ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "writingDateD_i",
+      "description": " Date d'écriture : jour ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "writingDateM_i",
+      "description": " Date d'écriture : mois ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "writingDateY_i",
+      "description": " Date d'écriture : année ",
+      "type": "tint  Nombre entier (-128 à +127) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "writingDate_s",
+      "description": " Date d'écriture ",
+      "type": "string  Texte pour affichage, facettes ou recherche exacte ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    },
+    {
+      "key": "writingDate_tdate",
+      "description": " Date d'écriture (ISO 8601) ",
+      "type": "tdate  Date ISO 8601 (eg 2013-01-31T23:12:01Z) ",
+      "indexed": true,
+      "stored": true,
+      "multiValue": false
+    }
+  ]
+}

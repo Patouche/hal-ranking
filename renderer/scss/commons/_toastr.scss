@@ -1,0 +1,19 @@
+
+#notification-container {
+  position: fixed;
+  z-index: 9999999;
+  margin: $toastr-margin;
+
+  &.bottom-right {
+    right: 0px;
+    bottom: 0px;
+  }
+
+  > * {
+    margin: $toastr-margin;
+  }
+  .notification {
+    @include shadow($grey-light);
+    @include radius(5px)
+  }
+}

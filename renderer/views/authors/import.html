@@ -1,0 +1,113 @@
+<nav ng-include="'views/sidebar.html'" class="sidebar"></nav>
+
+<div id="csv-import" ng-controller="AuthorImportController as clc" class="main-container">
+
+    <h1>Import auteurs</h1>
+
+    <!--<div class="notification is-warning">-->
+    <!--&lt;!&ndash;<button class="delete"></button>&ndash;&gt;-->
+    <!--Cette action aura pour effet d'effacer toute la base de données d'auteurs pour en importer une nouvelle.-->
+    <!--</div>-->
+
+    <form name="form" novalidate class="test">
+        <div class="control is-horizontal select-file">
+            <div class="control-label">
+                <label class="button is-primary">
+                    Selectionner le fichier <input type="file" class="is-hidden" filepath="clc.csv.path"/>
+                </label>
+            </div>
+            <div class="control">
+                <input name="csvPath" ng-model="clc.csv.path" type="text" class="input" disabled="disabled" required="required"/>
+            </div>
+        </div>
+
+        <div ng-if="clc.csv.path != undefined">
+
+            <h2>Description du fichier</h2>
+
+            <div class="control is-horizontal">
+                <div class="control-label">
+                    <label class="label">Delimiter</label>
+                </div>
+                <div class="control">
+                    <div ng-repeat="(key, name) in clc.delimiters" class="columns">
+                        <div class="column radio">
+                            <label>
+                                <input type="radio" name="delimiter" ng-model="clc.csv.delimiter"
+                                       ng-value="key" ng-change="clc.analyse(key)">
+                                <kbd>{{ key }}</kbd> {{ name }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control is-horizontal">
+                <div class="control-label">
+                    <label class="label">Nom</label>
+                </div>
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select name="headerLastname" ng-model="clc.csv.lastname" required="required">
+                            <option ng-repeat="(index, value) in clc.csv.headers" value="{{ index }}">{{ value }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control is-horizontal">
+                <div class="control-label">
+                    <label class="label">Prénom</label>
+                </div>
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select name="headerFirstname" ng-model="clc.csv.firstname" required="required" ng-disabled="clc.csv.lastname < 0">
+                            <option ng-repeat="(index, value) in clc.csv.headers"
+                                    ng-if="index != clc.csv.lastname"
+                                    value="{{ index }}">{{ value }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="actions has-text-centered">
+            <button ng-click="clc.imports()" class="button is-primary"
+                    ng-disabled="form.csvPath.$invalid || clc.csv.lastname < 0 || clc.csv.firstname < 0">
+                Importer
+            </button>
+        </div>
+    </form>
+
+    <div ng-if="clc.result.progress >= 0">
+
+        <div class="action-result">
+            <progress class="progress is-large" ng-class="{'is-primary': !clc.hasErrors(),'is-danger': clc.hasErrors()}"
+                      value="{{clc.result.progress}}" max="{{clc.result.rows}}">
+                {{clc.result.progress / clc.result.rows * 100}}%
+            </progress>
+        </div>
+
+        <div class="notification is-warning" ng-if="clc.hasErrors()">
+            <h3>Le fichier n'a pu être importé à cause des erreurs suivantes :</h3>
+            <ul>
+                <li ng-repeat="error in clc.result.errors">{{ error }}</li>
+            </ul>
+        </div>
+
+        <div class="notification is-info" ng-if="clc.result.status == true && !clc.hasErrors()">
+            <h3>Le fichier a été importé avec succès</h3>
+            <ul>
+                <li>Vous pouvez dès à présent procéder à un <a href="#!/exports">export</a> ou visualiser vos <a
+                        href="#!/authors">auteurs</a></li>
+            </ul>
+        </div>
+
+        <div class="columns">
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,27 @@
+{
+  "delay": 2000,
+  "portail": "http://api.archives-ouvertes.fr/search/",
+  "parameters": [
+    {
+      "key": "q",
+      "value": "*",
+      "description": "Paramètre de requête",
+      "editable": true,
+      "mandatory": true
+    },
+    {
+      "key": "wt",
+      "value": "json",
+      "description": "Format de réponse",
+      "editable": false,
+      "mandatory": true
+    },
+    {
+      "key": "rows",
+      "value": "100",
+      "description": "Nombre de résultats",
+      "editable": true,
+      "mandatory": false
+    }
+  ]
+}

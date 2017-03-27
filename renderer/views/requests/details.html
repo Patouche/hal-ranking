@@ -1,0 +1,107 @@
+<nav ng-include="'views/sidebar.html'" class="sidebar"></nav>
+
+<div id="request-details" ng-controller="RequestDetailsController as edCtrl" class="main-container">
+
+    <h1 translate="request.details.title" translate-values="{ name: edCtrl.request.name }">Export : Name</h1>
+
+    <div class="actions has-text-right">
+        <a class="button is-primary" ng-href="#!/requests">Retour</a>
+        <button class="button is-danger" ng-click="edCtrl.deleteRequest()">Supprimer</button>
+    </div>
+
+    <h2 toggle=".configuration" toggle-init="close">Configuration</h2>
+    <div class="configuration">
+
+        <h3 toggle-init="open">General</h3>
+        <div>
+            <kv-input kv-key="'Portail'" kv-value="edCtrl.request.portail" kv-editable-key="false" kv-editable-value="false"></kv-input>
+        </div>
+
+        <h3>Paramètres</h3>
+        <div class="section-parameters">
+            <kv-input ng-repeat="param in edCtrl.request.parameters" kv-model="param"
+                      kv-editable-key="false" kv-editable-value="false"></kv-input>
+        </div>
+
+        <h3>Filter queries (fq)</h3>
+        <div class="section-fq">
+            <kv-input ng-repeat="filter in edCtrl.request.filters" kv-model="filter"
+                      kv-editable-key="false" kv-editable-value="false"></kv-input>
+        </div>
+
+        <h3>Colonnes</h3>
+        <div class="section-columns">
+            <div class="columns" ng-repeat="col in edCtrl.export.columns">
+                <div class="column is-narrow">
+                    <input ng-model="col.key" class="input" placeholder="Column name"/>
+                </div>
+                <div class="column">
+                    <textarea ng-model="col.map" class="textarea" placeholder="Map"></textarea>
+                </div>
+                <div class="column">
+                    <textarea ng-model="col.reduce" class="textarea" placeholder="Reduce"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="actions has-text-centered">
+        <a class="button is-primary" ng-href="#!/requests/{{ edCtrl.request._id }}/edit">Editer</a>
+        <button class="button is-primary" ng-click="edCtrl.run()">Lancer</button>
+    </div>
+
+    <h2>Résultats</h2>
+    <div class="results columns is-multiline">
+        <div class="column is-3 result-authors">
+            <ul>
+                <li ng-repeat="(index, result) in edCtrl.request.results">
+                    <author val="result" details="result.count" ng-click="edCtrl.openResult(index)"
+                            class="button is-primary"></author>
+                </li>
+            </ul>
+        </div>
+        <div class="column is-9 result-details" ng-if="edCtrl.result">
+            <tabs class="result-tabs">
+                <pane title="General">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Count</td>
+                            <td>{{ edCtrl.result.count }}</td>
+                        </tr>
+                        <tr>
+                            <td>URL</td>
+                            <td><a ng-click="edCtrl.openWebBrowser(edCtrl.result.url)" class="is-flex">{{ edCtrl.result.url }}</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </pane>
+                <pane title="JSON">
+                    <div class="json-wrapper">
+                        <pre>{{edCtrl.result.json | json }}</pre>
+                    </div>
+                </pane>
+                <pane title="Colonnes">
+                    <table class="table">
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr ng-repeat="col in edCtrl.result.columns">
+                            <td>{{ col.key }}</td>
+                            <td>{{ col.value }}</td>
+                        </tr>
+                    </table>
+                </pane>
+            </tabs>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+#export {
+
+}
+
+#csv-import {
+  .select-file {
+    .control-label {
+      padding-top: 0px;
+    }
+  }
+}
+
+#request-details {
+
+  .results {
+
+    .result-authors {
+      ul {
+        margin: 0;
+        li {
+          margin: 0 0 5px 0;
+        }
+      }
+    }
+
+    .result-details {
+      height: 100%;
+
+      .result-tabs {
+        max-width: 100%;
+      }
+
+      .json-wrapper {
+        overflow-x: auto;
+        padding: 5px 2px;
+
+        pre {
+
+        }
+      }
+
+      .tab-content {
+        .tab-pane {
+          pre {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            width: 100%;
+            white-space: pre-wrap;
+          }
+
+          table {
+            table-layout: fixed;
+            max-width: 100%;
+
+            tr {
+              td, th {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+
+                &:first-child {
+                  width: 20%;
+                }
+
+                a {
+                  display: inline-block;
+                  width: 100%;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

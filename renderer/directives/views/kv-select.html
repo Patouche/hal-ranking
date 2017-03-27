@@ -1,0 +1,13 @@
+<div class="columns">
+    <div class="column control is-3">
+            <span class="select ">
+                <select ng-model="kv.key" required>
+                     <option ng-repeat="item in items"  value="{{ item.key }}">{{ item.key }} | {{ item.description | limitTo: 50 }}</option>
+                </select>
+            </span>
+    </div>
+    <div class="column">
+        <input class="input" type="text" placeholder="Value" ng-model="kv.value"/>
+    </div>
+    <button class="delete is-small" ng-if="deletable" ng-click="delete()"></button>
+</div>

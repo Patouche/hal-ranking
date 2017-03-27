@@ -1,0 +1,9 @@
+<nav ng-include="'views/sidebar.html'" class="sidebar"></nav>
+
+<div ng-controller="AuthorDetailsController as ac" class="main-container">
+
+    <h1>Auteur : {{ ac.author.lastname | uppercase }} {{ ac.author.firstname }}</h1>
+
+
+</div>
+

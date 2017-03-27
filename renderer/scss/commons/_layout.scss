@@ -1,0 +1,161 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
+
+div.wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+
+  nav.sidebar .menu {
+    @extend .verticals;
+
+    background-color: $grey-lighter;
+    width: 200px;
+    max-width: 200px;
+    padding: 10px;
+    box-shadow: -1px 2px 3px 1px $grey-darker;
+
+    &.small {
+      padding: 5px;
+      width: 50px;
+      max-width: 50px;
+      ul li {
+        @extend .has-text-centered;
+      }
+      ul li a span, p {
+        display: none;
+      }
+    }
+
+    ul {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        a {
+          line-height: 16px;
+          i.fa {
+            @extend .icon;
+            @extend .is-small;
+            margin-right: 5px;
+          }
+
+        }
+      }
+    }
+  }
+
+  div.main-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    overflow-y: auto;
+    //overflow-x: scroll;
+    flex: 1 1 auto;
+    //flex: 1 0 auto;
+    padding: 5px 10px;
+  }
+
+  .info {
+    @include radius(10px);
+    margin: 10px 20px;
+    background-color: #f5f5f5;
+  }
+}
+
+.control {
+  &.is-horizontal {
+    margin: 15px 0;
+
+    .control-label.input-label {
+      padding-top: 0;
+    }
+  }
+}
+
+.toggle {
+  cursor: pointer;
+
+  .fa {
+    vertical-align: middle;
+    width: 0.5em;
+    text-align: center;
+  }
+
+  .toggle-content {
+    margin-left: 0.5em;
+  }
+}
+
+.code-wrapper {
+  overflow: hidden;
+}
+
+.column {
+  .select {
+    width: 100%;
+    select {
+      width: 100%
+    }
+  }
+}
+
+.actions {
+  margin: 30px 0;
+  button, a {
+    @extend .button;
+    @extend .is-large;
+  }
+}
+
+.action-result {
+  padding: 20px 50px;
+}
+
+.tabs-wrapper {
+  ul.tabs {
+    @extend .is-medium;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    li {
+      border-bottom: 1px solid $grey-lighter;
+    }
+  }
+  .tab-content {
+    border: 1px solid $grey-lighter;
+    border-top: 0;
+  }
+}
+
+.section-columns {
+  .column {
+    textarea {
+      font-family: monospace;
+    }
+  }
+}
+
+.verticals {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+  max-height: 100%;
+
+  .v-spacer {
+    display: flex;
+    flex: 1 1 auto;
+  }
+}

@@ -1,0 +1,23 @@
+<nav ng-include="'views/sidebar.html'" class="sidebar"></nav>
+
+<div ng-controller="RequestListController as elc" class="main-container">
+
+    <h1>Requêtes</h1>
+
+    <div ng-if="elc.requests.length == 0" class="notification is-info">
+        Il n'y a pour le moment aucun export d'enregistré.
+    </div>
+
+    <div class="actions has-text-right">
+        <button class="button is-primary" ng-click="elc.createNew()">Nouvelle requête</button>
+        <button class="button is-danger" ng-click="elc.cleanDatabase()">Nettoyer</button>
+    </div>
+
+    <div ng-if="elc.requests.length > 0" class="columns is-multiline">
+        <div ng-repeat="req in elc.requests | orderBy:'name'" class="column is-3">
+            <a ng-href="#!/requests/{{ req._id }}" ng-if="req.name">{{ req.name }}</a>
+            <a ng-href="#!/requests/{{ req._id }}" ng-if="!req.name">UNDEFINED</a>
+        </div>
+    </div>
+
+</div>

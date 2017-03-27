@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" class="no-js">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>HAL Ranking Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/pouchdb/dist/pouchdb.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="wrapper" ng-view></div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-translate/angular-translate.min.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+<script src="bower_components/angular-toastr/dist/angular-toastr.min.js"></script>
+<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+
+<script src="app.js"></script>
+
+<script src="scripts/core/root.js"></script>
+<script src="scripts/core/services/configService.js"></script>
+<script src="scripts/core/services/systemService.js"></script>
+<script src="scripts/core/controllers/MenuController.js"></script>
+
+<script src="scripts/author/root.js"></script>
+<script src="scripts/author/routes.js"></script>
+<script src="scripts/author/services/authorImportService.js"></script>
+<script src="scripts/author/services/authorService.js"></script>
+<script src="scripts/author/controllers/AuthorImportController.js"></script>
+<script src="scripts/author/controllers/AuthorListController.js"></script>
+<script src="scripts/author/controllers/AuthorDetailsController.js"></script>
+
+<script src="scripts/request/root.js"></script>
+<script src="scripts/request/routes.js"></script>
+<script src="scripts/request/services/requestService.js"></script>
+<script src="scripts/request/services/requestRunnerService.js"></script>
+<script src="scripts/request/services/requestCreationService.js"></script>
+<script src="scripts/request/controllers/RequestEditController.js"></script>
+<script src="scripts/request/controllers/RequestDetailsController.js"></script>
+<script src="scripts/request/controllers/RequestListController.js"></script>
+
+<script src="scripts/tuto/root.js"></script>
+<script src="scripts/tuto/routes.js"></script>
+<script src="scripts/tuto/services/tutoService.js"></script>
+<script src="scripts/tuto/controllers/TutoController.js"></script>
+
+<script src="directives/scripts/directives.js"></script>
+<script src="directives/scripts/author.js"></script>
+<script src="directives/scripts/filepath.js"></script>
+<script src="directives/scripts/toggle.js"></script>
+<script src="directives/scripts/tabs.js"></script>
+<script src="directives/scripts/kv-select.js"></script>
+<script src="directives/scripts/kv-input.js"></script>
+<script src="directives/scripts/hl-code.js"></script>
+
+</body>
+</html>

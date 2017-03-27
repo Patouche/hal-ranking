@@ -1,0 +1,29 @@
+html {
+  display: flex;
+  flex-direction: column; /* correction bug IE de min-height non appliqué à body */
+}
+
+body {
+  display: flex; /* crée un contexte flex pour ses enfants */
+  flex-direction: column; /* affichage vertical */
+  min-height: 100vh; /* toute la hauteur du viewport */
+}
+
+ul {
+  margin: 10px 0;
+}
+
+h1 {
+  margin: 20px 0 10px 0;
+  font-size: 2.3rem;
+}
+
+h2 {
+  margin: 15px 0 10px 0px;
+  font-size: 1.9rem;
+}
+
+h3 {
+  margin: 12px 0 8px 0px;
+  font-size: 1.5rem;
+}

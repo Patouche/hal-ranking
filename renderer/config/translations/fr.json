@@ -1,0 +1,20 @@
+{
+  "sidebar": {
+    "authors": "Auteurs",
+    "requests": "Requêtes",
+    "hide": "Réduire",
+    "show": "Ouvrir"
+  },
+  "authors": {
+    "cache-clear-success": "Le cache a été vidé avec succès !",
+    "database-clear-success": "La base a été vidée avec succès !"
+  },
+  "request": {
+    "edit": {
+      "title": "Requête : Édition"
+    },
+    "details": {
+      "title": "Requête : {{name}}"
+    }
+  }
+}

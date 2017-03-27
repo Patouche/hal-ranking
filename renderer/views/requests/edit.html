@@ -1,0 +1,92 @@
+<nav ng-include="'views/sidebar.html'" class="sidebar"></nav>
+
+<div id="export" ng-controller="RequestEditController as eeCtrl" class="main-container">
+
+    <h1 translate="request.edit.title">Request : Edition</h1>
+
+    <div class="actions has-text-right">
+        <a class="button is-primary" ng-href="#!/requests/{{ eeCtrl.request._id }}">Retour</a>
+    </div>
+
+    <div class="notification is-primary">
+        <ul>
+            <li>Afin de cibler un portail en particulier, utilisez le champ Portail</li>
+            <li>Définissez la filter query de base. Pour chaque auteur, celle ci sera modifié afin de prendre en compte le champ author
+            </li>
+        </ul>
+    </div>
+
+    <form name="reqForm">
+
+        <h3 toggle=".section-general" toggle-init="close">General</h3>
+        <div class="section-general">
+            <kv-input kv-key="'Name'" kv-value="eeCtrl.request.name" kv-editable-key="false" kv-editable-value="true"></kv-input>
+            <kv-input kv-key="'Portail'" kv-value="eeCtrl.request.portail" kv-editable-key="false" kv-editable-value="true"></kv-input>
+        </div>
+
+        <h3 toggle=".section-parameters" toggle-init="close">Paramètres</h3>
+        <div class="section-parameters">
+            <kv-input ng-repeat="param in eeCtrl.request.parameters" kv-model="param"
+                      kv-editable-key="false" kv-editable-value="param.editable"></kv-input>
+        </div>
+
+        <h3 toggle=".section-fq" toggle-init="close">Filter queries (fq)</h3>
+        <div class="section-fq">
+            <kv-select ng-repeat="(index, field) in eeCtrl.request.filters" kv-model="field"
+                       kv-items="eeCtrl.fields" kv-delete="eeCtrl.deleteItem('filters', index)"></kv-select>
+            <div class="has-text-right">
+                <button class="button is-primary" ng-click="eeCtrl.addFilter()">Ajouter un filtre</button>
+            </div>
+        </div>
+
+        <h3 toggle=".section-columns" toggle-init="close">Colonnes</h3>
+        <div class="section-columns">
+            <div class="columns" ng-repeat="(index, col) in eeCtrl.request.columns">
+                <div class="column is-narrow">
+                    <input ng-model="col.key" class="input" placeholder="Column name"/>
+                </div>
+                <div class="column">
+                    <textarea ng-model="col.map" class="textarea" placeholder="Map"></textarea>
+                </div>
+                <div class="column">
+                    <textarea ng-model="col.reduce" class="textarea" placeholder="Reduce"></textarea>
+                </div>
+                <button class="delete is-small ng-scope" ng-click="eeCtrl.deleteItem('columns', index)"></button>
+            </div>
+            <div class="has-text-right">
+                <button class="button is-primary" ng-click="eeCtrl.addColumn()">Ajouter une colonne</button>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="actions has-text-centered">
+        <a class="button is-primary" ng-href="#!/requests/{{ eeCtrl.request._id }}">Retour</a>
+        <button class="button is-primary" ng-click="eeCtrl.run()">Lancer</button>
+        <button class="button is-primary" ng-click="eeCtrl.save()">Sauver</button>
+    </div>
+
+    <div class="notification is-warning" ng-if="eeCtrl.hasErrors()">
+        <h3>Le fichier n'a pu être importé à cause des erreurs suivantes :</h3>
+        <ul>
+            <li ng-repeat="error in eeCtrl.result.errors">{{ error }}</li>
+        </ul>
+    </div>
+
+    <div ng-if="eeCtrl.result.progress >= 0">
+
+        <div class="action-result">
+            <progress class="progress is-large" ng-class="{'is-primary': !eeCtrl.hasErrors(),'is-danger': eeCtrl.hasErrors()}"
+                      value="{{eeCtrl.result.progress}}" max="{{eeCtrl.result.count}}">
+                {{eeCtrl.result.progress / clc.result.count * 100}}%
+            </progress>
+        </div>
+
+
+        <div class="notification is-info" ng-if="eeCtrl.result.status == true && !clc.hasErrors()">
+            <h3>L'export a été effectué avec succès</h3>
+        </div>
+
+    </div>
+
+</div>

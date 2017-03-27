@@ -1,0 +1,20 @@
+<div class="menu verticals" ng-controller="MenuController as mCtrl"  ng-class="{'small':!mCtrl.open}">
+    <aside class="verticals">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+            <li><a href="#!/authors" class="has-icon"><i class="fa fa-users"></i><span translate="sidebar.authors">Authors</span></a></li>
+            <li><a href="#!/requests" class="has-icon"><i class="icon is-small fa fa-exchange"></i><span translate="sidebar.requests">Requests</span></a>
+            </li>
+        </ul>
+        <p class="menu-label">Administration</p>
+        <div class="v-spacer"></div>
+        <ul class="menu-list">
+            <li class="has-text-centered">
+                <a ng-click="mCtrl.toggleMenu()" class="has-icon">
+                    <i class="fa" ng-class="{'fa-angle-double-left':mCtrl.open, 'fa-angle-double-right':!mCtrl.open}"></i>
+                    <span translate="sidebar.hide">Hide</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
