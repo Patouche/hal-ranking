@@ -1,6 +1,6 @@
 # HAL - Ranking
 
-**Note : ** This is the first version based on Electron. A V2 will arrive soon ...
+**Note :** This is the first version based on Electron. A V2 will arrive soon ...
 
 > Once upon a time, a guy met a girls ... She was a librarian and he was a geek !
 >
